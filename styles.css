@@ -222,6 +222,27 @@ body {
     background-color: var(--light-bg);
 }
 
+h2 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    color: var(--primary-color);
+    position: relative;
+    font-weight: 700;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 5px;
+    background: linear-gradient(90deg, var(--highlight) 0%, var(--accent-color) 100%);
+    border-radius: 3px;
+}
+
 .section-title {
     font-size: 3rem;
     margin-bottom: 3rem;
@@ -291,6 +312,7 @@ body {
 /* Experience Section */
 .experience {
     padding: 100px 0;
+    background-color: var(--white);
 }
 
 .experience-timeline {
@@ -313,7 +335,6 @@ body {
 .experience-item {
     margin-bottom: 4rem;
     position: relative;
-    opacity: 0;
     animation: bounceIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
 }
 
@@ -327,6 +348,10 @@ body {
 
 .experience-item:nth-child(3) {
     animation-delay: 0.5s;
+}
+
+.experience-item:nth-child(4) {
+    animation-delay: 0.7s;
 }
 
 .experience-item:nth-child(odd) {
@@ -351,7 +376,7 @@ body {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    box-shadow: 0 0 0 8px var(--light-bg);
+    box-shadow: 0 0 0 8px var(--white);
 }
 
 .experience-date {
@@ -368,6 +393,7 @@ body {
     border-radius: 10px;
     box-shadow: var(--shadow);
     transition: var(--transition);
+    border: 1px solid #e8f0e3;
 }
 
 .experience-details:hover {
@@ -467,6 +493,7 @@ body {
 /* Achievements Section */
 .achievements {
     padding: 100px 0;
+    background-color: var(--white);
 }
 
 .achievements-grid {
@@ -483,7 +510,7 @@ body {
     box-shadow: var(--shadow);
     transition: var(--transition);
     text-align: center;
-    border: 2px solid var(--light-bg);
+    border: 2px solid #e8f0e3;
 }
 
 .achievement-card:hover {
@@ -666,6 +693,7 @@ body {
         transform: scale(0.9);
     }
     100% {
+        opacity: 1;
         transform: scale(1);
     }
 }
@@ -749,7 +777,7 @@ body {
         grid-template-columns: 1fr;
     }
 
-    .section-title {
+    h2 {
         font-size: 2rem;
     }
 }
@@ -784,7 +812,7 @@ body {
         grid-template-columns: 1fr;
     }
 
-    .section-title {
+    h2 {
         font-size: 1.5rem;
         margin-bottom: 2rem;
     }
